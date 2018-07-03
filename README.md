@@ -6,7 +6,7 @@ Usage:  run the script and then enter in the domain or subdomain when prompted
 Example:
 
 ```
-anna@xps:~/scripts$ ./redirects.sh 
+anna@xps:~/scripts$ ./check-redirects.sh 
 What is the base domain to check redirects for? github.com
  
 ==============================
