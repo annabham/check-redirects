@@ -36,7 +36,7 @@ Location: https://github.com/
 ```
 Don't do what whatever github is doing for redirects, if you're forwarding to non-www and https.
 
-Do it like this at the top of the .htaccess file.
+Do it like this at the top of your .htaccess
 
 ```
 RewriteCond %{HTTP_HOST} ^www\.github\.com$
