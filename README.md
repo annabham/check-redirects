@@ -5,6 +5,7 @@ Usage:  run the script and then enter in the domain when prompted
 
 Example:
 
+```
 anna@xps:~/scripts$ ./redirects.sh 
 What is the base domain to check redirects for? github.com
  
@@ -32,3 +33,4 @@ HTTP/1.1 301 Moved Permanently
 Location: https://github.com/
  
 ==============================
+```
