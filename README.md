@@ -34,7 +34,7 @@ Location: https://github.com/
  
 ==============================
 ```
-Don't do what github whatever is doing, if you're forwarding to non-www and https.
+Don't do what whatever github is doing for redirects, if you're forwarding to non-www and https.
 
 Do it like this at the top of the .htaccess file.
 
