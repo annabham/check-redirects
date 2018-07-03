@@ -36,7 +36,19 @@ Location: https://github.com/
 ```
 Don't do what whatever github is doing for redirects, if you're forwarding to non-www and https.
 
-Do it like this at the top of your .htaccess
+This is bad practice to have multiple redirects, you can see here:
+
+```
+anna@xps:~/scripts$ curl -Is http://www.github.com
+HTTP/1.1 301 Moved Permanently
+Location: https://www.github.com/
+
+anna@xps:~/scripts$ curl -Is https://www.github.com/
+HTTP/1.1 301 Moved Permanently
+Location: https://github.com/
+```
+
+Do it like this at the top of your .htaccess to be neat, clean, and tidy with your redirects.
 
 ```
 RewriteCond %{HTTP_HOST} ^www\.github\.com$
@@ -48,7 +60,7 @@ RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 </IfModule>
 ```
-But if you want to redirect to www and https, then here's an example on how to do that:
+If you want to be tidy with redirecting to www and https, then here's an example on how to do that as well.
 
 ```
 RewriteCond %{HTTP_HOST} ^github\.com$
