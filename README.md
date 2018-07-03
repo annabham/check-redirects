@@ -34,7 +34,7 @@ Location: https://github.com/
  
 ==============================
 ```
-Don't do what whatever github is doing for redirects, if you're forwarding to non-www and https.
+Don't do what whatever github is doing for redirects, if you want non-www and https.
 
 This is bad practice to have multiple redirects, you can see here:
 
@@ -66,3 +66,4 @@ If you want to be tidy with redirecting to www and https, then here's an example
 RewriteCond %{HTTP_HOST} ^github\.com$
 RewriteRule ^/?$ "https\:\/\/www\.github\.com\/" [R=301,L]
 ```
+Basically, you want the redirect to point to the same thing, whatever www or non-www or SSL or non-SSL you're using.  And then *only* the actual URL should get a 200.
