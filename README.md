@@ -1,5 +1,5 @@
 # check-redirects
-Very simple script to check redirects from www to non-www and ssl to non-ssl and vice versa
+Embarrassingly simple script to check redirects from www to non-www and ssl to non-ssl and vice versa
 
 Usage:  run the script and then enter in the domain or subdomain when prompted
 
