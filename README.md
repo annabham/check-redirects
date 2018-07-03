@@ -48,4 +48,9 @@ RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 </IfModule>
 ```
+But if you want to redirect to www and https, then here's an example on how to do that:
 
+```
+RewriteCond %{HTTP_HOST} ^github\.com$
+RewriteRule ^/?$ "https\:\/\/www\.github\.com\/" [R=301,L]
+```
