@@ -1,0 +1,25 @@
+#!/bin/bash
+read -p 'What is the base domain to check redirects for? ' DOMAIN
+
+echo " "
+echo "=============================="
+echo " "
+echo "Non-www and non-SSL : http://$DOMAIN"
+curl -Is http://$DOMAIN | grep -E 'HTTP|Location'
+echo " "
+echo "=============================="
+echo " "
+echo "www and non-SSL : http://www.$DOMAIN"
+curl -Is http://www.$DOMAIN | grep -E 'HTTP|Location'
+echo " "
+echo "=============================="
+echo " "
+echo "Non-www and SSL : https://$DOMAIN"
+curl -Is https://$DOMAIN | grep -E 'HTTP|Location'
+echo " "
+echo "=============================="
+echo " "
+echo "www and SSL : https://www.$DOMAIN"
+curl -Is https://www.$DOMAIN | grep -E 'HTTP|Location'
+echo " "
+echo "=============================="
